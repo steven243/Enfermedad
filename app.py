@@ -146,36 +146,36 @@ r500 = Gastritis['http']
 class DiagnosticoEnfermedades(KnowledgeEngine):
     
             
-    @Rule(Sintoma(descripcion= s101 and s102 and s103 and s104 and s105 or s504 or s304 or s202 or s303))
+    @Rule(Sintoma(descripcion= s101 and s102 and s103 or s104 or s105 or s504 or s304 or s202 or s303))
     def enfermedad_1(self):
         self.declare(Enfermedad(codigo=100, recom=r100, tipo=e100))  
         
         
         
-    @Rule(Sintoma(descripcion= s201 and s202 and s203 and s204 and s205  or s301 or s504 or s303 or s102))
+    @Rule(Sintoma(descripcion= s201 and s202 and s203 or s204 or s205  or s301 or s504 or s303 or s102))
     def enfermedad_2(self):
         self.declare(Enfermedad(codigo=200, recom=r200, tipo=e200)) 
         
         
         
-    @Rule(Sintoma(descripcion= s301 and s302 and s303 and s304 and s305 or s504 or s104 or s201 or s202))
+    @Rule(Sintoma(descripcion= s301 and s302 and s303 or s304 or s305 or s504 or s104 or s201 or s202))
     def enfermedad_3(self):
         self.declare(Enfermedad(codigo=300, recom=r300, tipo=e300)) 
         
         
         
-    @Rule(Sintoma(descripcion= s401 and s402 and s403 and s404 and s405))
+    @Rule(Sintoma(descripcion= s401 and s402 and s403 or s404 or s405))
     def enfermedad_4(self):
         self.declare(Enfermedad(codigo=400, recom=r400, tipo=e400))
         
         
         
-    @Rule(Sintoma(descripcion= s501 and s502 and s503 and s504 and s505 or s305 or s102 or s303 or s202))
+    @Rule(Sintoma(descripcion= s501 and s502 and s503 or s504 or s505 or s305 or s102 or s303 or s202))
     def enfermedad_5(self):
         self.declare(Enfermedad(codigo=500, recom=r500, tipo=e500)) 
         
-"""Crear un método index, que solo muestre la página pricipal con el btn de diagnosticar, cuando se de click, ir a el método diagnosticar,
-haciendo el diagnóstico y mostrando el resultado. Muestre otra página html, con la opción de volver a la página principal"""
+
+
 
 @app.route('/')
 def index():
