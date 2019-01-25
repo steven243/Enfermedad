@@ -3,7 +3,7 @@
 """
 Created on Tue Jan 22 16:06:39 2019
 
-@author: root
+@author: steven
 """
 
 from firebase import firebase
@@ -47,33 +47,33 @@ def get_NeumoniaSint():
 
 def get_Tuberculosis():
     con = get_connection()
-    dataset = con.get('/Enfermedades/4', None)
+    dataset = con.get('/Enfermedades/2', None)
     return dataset
 def get_TuberculosisSint():
     con = get_connection()
-    dataset = con.get('/Enfermedades/4/Sintomas', None)
+    dataset = con.get('/Enfermedades/2/Sintomas', None)
     return dataset
 
 #Obtiene los datos de la Enfermedad --> Diabetes
 
 def get_Diabetes():
     con = get_connection()
-    dataset = con.get('/Enfermedades/2', None)
+    dataset = con.get('/Enfermedades/3', None)
     return dataset
 def get_DiabetesSint():
     con = get_connection()
-    dataset = con.get('/Enfermedades/2/Sintomas', None)
+    dataset = con.get('/Enfermedades/3/Sintomas', None)
     return dataset
 
 #Obtiene los datos de la Enfermedad --> Gastritis
 
 def get_Gastritis():
     con = get_connection()
-    dataset = con.get('/Enfermedades/3', None)
+    dataset = con.get('/Enfermedades/4', None)
     return dataset
 def get_GastritisSint():
     con = get_connection()
-    dataset = con.get('/Enfermedades/3/Sintomas', None)
+    dataset = con.get('/Enfermedades/4/Sintomas', None)
     return dataset
     
 #==================================Definimos los hechos============================================
